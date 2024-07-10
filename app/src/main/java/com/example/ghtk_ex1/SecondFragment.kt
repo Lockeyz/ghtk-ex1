@@ -85,7 +85,7 @@ class SecondFragment : Fragment() {
         val triangleArea = calculateTriangleArea(x1, y1, x2, y2, x3, y3)
         val sum4pointsArea =
             calculateTriangleArea(xA, yA, x1, y1, x2, y2) +
-            calculateTriangleArea(xA, yA, x1, y1, x3, y3,) + 
+            calculateTriangleArea(xA, yA, x1, y1, x3, y3,) +
             calculateTriangleArea(xA, yA, x2, y2, x3, y3)
         if (triangleArea < sum4pointsArea) {
             binding.textViewResult.text = "Điểm A nằm trong tam giác"
