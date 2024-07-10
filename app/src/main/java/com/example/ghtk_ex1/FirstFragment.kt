@@ -38,7 +38,7 @@ class FirstFragment : Fragment() {
         }
 
         binding.btnCalculate.setOnClickListener {
-            countCharArray()
+            countOccurrences()
         }
     }
 
@@ -46,10 +46,32 @@ class FirstFragment : Fragment() {
         findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
     }
 
-    private fun countCharArray() {
+    private fun countOccurrences(){
         val text = binding.stringEditText.text.toString()
         val charArray = text.toCharArray()
-        val result = charArray.size
-        binding.result.text = context?.resources?.getString(R.string.result1, result.toString())
+
+        val countMap = mutableMapOf<Char, Int>()
+        val result = mutableListOf<String>()
+
+        for (element in charArray) {
+            if (countMap.containsKey(key = element)) {
+                countMap[element] = countMap[element]!! + 1
+            } else {
+                countMap[element] = 1
+            }
+        }
+
+        for ((element, count) in countMap) {
+            if (element.toString() == " ") {
+                result.add("Khoảng trắng xuất hiện $count lần")
+            } else {
+                result.add("Phần tử $element xuất hiện $count lần")
+            }
+        }
+
+        val resultText = result.joinToString("\n")
+
+        binding.result.text = resultText
+
     }
 }

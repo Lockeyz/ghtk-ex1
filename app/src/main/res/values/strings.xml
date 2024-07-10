@@ -3,7 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="switch_button">Chuyển đổi</string>
-    <string name="require1">Nhập một chuỗi, xác định số lượng ký tự có trong chuỗi.</string>
+    <string name="require1">Nhập một chuỗi, xác định số lần xuất hiện của mỗi phần tử có trong chuỗi.</string>
     <string name="type_here">Nhập tại đây</string>
     <string name="calculate">Tính toán</string>
     <string name="require2">Nhập 1 điểm A tọa độ (x, y) và 3 tọa độ 3 điểm của một tam giác. Xác định điểm A có nằm bên trong tam giác không?</string>
