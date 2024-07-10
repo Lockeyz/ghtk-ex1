@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ghtk-ex1</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="switch_button">Chuyển đổi</string>
+    <string name="require1">Nhập một chuỗi, xác định số lượng ký tự có trong chuỗi.</string>
+    <string name="type_here">Nhập tại đây</string>
+    <string name="calculate">Tính toán</string>
+    <string name="require2">Nhập 1 điểm A tọa độ (x, y) và 3 tọa độ 3 điểm của một tam giác. Xác định điểm A có nằm bên trong tam giác không?</string>
+    <string name="point_a">Điểm A</string>
+    <string name="coordinate_point_a">Tọa độ điểm A</string>
+    <string name="coordinate_first_point">Tọa độ điểm thứ nhất</string>
+    <string name="coordinate_second_point">Tọa độ điểm thứ hai</string>
+    <string name="result1">Chuỗi gồm có %s ký tự </string>
+    <string name="result2">Điểm A nằm trong tam giác: %s </string>
+    <string name="xa">Nhập Xa</string>
+    <string name="ya">Nhập Ya</string>
+    <string name="x1">Nhập X1</string>
+    <string name="y1">Nhập Y1</string>
+    <string name="x2">Nhập X2</string>
+    <string name="y2">Nhập Y2</string>
+    <string name="x3">Nhập X3</string>
+    <string name="y3">Nhập Y3</string>
+</resources>
