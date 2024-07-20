@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="b2ViewModel"
+            type="com.example.ghtk_ex1.b2.B2ViewModel" />
+
+        <variable
+            name="b2Fragment"
+            type="com.example.ghtk_ex1.b2.B2Fragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView_require"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/require2"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrainLayout_point_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                app:layout_constraintTop_toBottomOf="@id/textView_require">
+
+                <TextView
+                    android:id="@+id/textView_coordinate_point_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/coordinate_point_a"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayout_xa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:hint="@string/xa"
+                    app:errorIconDrawable="@drawable/ic_error"
+                    app:layout_constraintEnd_toStartOf="@+id/inputLayout_ya"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView_coordinate_point_a">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputEditText_xa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onTextChanged="@{() -> b2Fragment.checkInputXa()}"
+                        android:inputType="numberSigned" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayout_ya"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/ya"
+                    app:errorIconDrawable="@drawable/ic_error"
+                    app:layout_constraintBaseline_toBaselineOf="@id/inputLayout_xa"
+                    app:layout_constraintBottom_toBottomOf="@id/inputLayout_xa"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/inputLayout_xa"
+                    app:layout_constraintTop_toTopOf="@id/inputLayout_xa">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputEditText_ya"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onTextChanged="@{() -> b2Fragment.checkInputYa()}"
+                        android:inputType="numberSigned" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrainLayout_coordinate_first_point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/constrainLayout_point_a"
+                tools:layout_editor_absoluteX="16dp">
+
+                <TextView
+                    android:id="@+id/textView_coordinate_triangle_first_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/coordinate_first_point"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayout_x1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:hint="@string/x1"
+                    app:errorIconDrawable="@drawable/ic_error"
+                    app:layout_constraintEnd_toStartOf="@+id/inputLayout_y1"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView_coordinate_triangle_first_point">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputEditText_x1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onTextChanged="@{() -> b2Fragment.checkInputX1()}"
+                        android:inputType="numberSigned" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayout_y1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/y1"
+                    app:errorIconDrawable="@drawable/ic_error"
+                    app:layout_constraintBaseline_toBaselineOf="@id/inputLayout_x1"
+                    app:layout_constraintBottom_toBottomOf="@id/inputLayout_x1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/inputLayout_x1"
+                    app:layout_constraintTop_toTopOf="@+id/inputLayout_x1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputEditText_y1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onTextChanged="@{() -> b2Fragment.checkInputY1()}"
+                        android:inputType="numberSigned" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrainLayout_coordinate_second_point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/constrainLayout_coordinate_first_point"
+                tools:layout_editor_absoluteX="16dp">
+
+                <TextView
+                    android:id="@+id/textView_coordinate_triangle_second_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/coordinate_second_point"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayout_x2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:hint="@string/x2"
+                    app:errorIconDrawable="@drawable/ic_error"
+                    app:layout_constraintEnd_toStartOf="@id/inputLayout_y2"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView_coordinate_triangle_second_point">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputEditText_x2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onTextChanged="@{() -> b2Fragment.checkInputX2()}"
+                        android:inputType="numberSigned" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayout_y2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/y2"
+                    app:errorIconDrawable="@drawable/ic_error"
+                    app:layout_constraintBaseline_toBaselineOf="@id/inputLayout_x2"
+                    app:layout_constraintBottom_toBottomOf="@id/inputLayout_x2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/inputLayout_x2"
+                    app:layout_constraintTop_toTopOf="@id/inputLayout_x2">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputEditText_y2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onTextChanged="@{() -> b2Fragment.checkInputY2()}"
+                        android:inputType="numberSigned" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrainLayout_coordinate_third_point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/constrainLayout_coordinate_second_point"
+                tools:layout_editor_absoluteX="16dp">
+
+                <TextView
+                    android:id="@+id/textView_coordinate_triangle_third_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/coordinate_third_point"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayout_x3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:hint="@string/x3"
+                    app:errorIconDrawable="@drawable/ic_error"
+                    app:layout_constraintEnd_toStartOf="@+id/inputLayout_y3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView_coordinate_triangle_third_point">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputEditText_x3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onTextChanged="@{() -> b2Fragment.checkInputX3()}"
+                        android:inputType="numberSigned" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayout_y3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/y3"
+                    app:errorIconDrawable="@drawable/ic_error"
+                    app:layout_constraintBaseline_toBaselineOf="@id/inputLayout_x3"
+                    app:layout_constraintBottom_toBottomOf="@id/inputLayout_x3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/inputLayout_x3"
+                    app:layout_constraintTop_toTopOf="@id/inputLayout_x3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputEditText_y3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onTextChanged="@{() -> b2Fragment.checkInputY3()}"
+                        android:inputType="numberSigned" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btn_calculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:onClick="@{() -> b2Fragment.submitCoordinates()}"
+                android:text="@string/calculate"
+                app:layout_constraintTop_toBottomOf="@id/constrainLayout_coordinate_third_point" />
+
+            <TextView
+                android:id="@+id/textView_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@{b2ViewModel.result}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_calculate"
+                tools:text="Result" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</layout>
+
+

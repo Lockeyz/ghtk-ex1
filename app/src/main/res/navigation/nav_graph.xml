@@ -3,25 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/firstFragment">
+    app:startDestination="@id/navigation_b1">
 
     <fragment
-        android:id="@+id/firstFragment"
-        android:name="com.example.ghtk_ex1.FirstFragment"
-        android:label="fragment_first_label"
-        tools:layout="@layout/fragment_first" >
-        <action
-            android:id="@+id/action_firstFragment_to_secondFragment"
-            app:destination="@id/secondFragment" />
+        android:id="@+id/navigation_b1"
+        android:name="com.example.ghtk_ex1.b1.B1Fragment"
+        android:label="@string/count_character"
+        tools:layout="@layout/fragment_b1" >
+
     </fragment>
     <fragment
-        android:id="@+id/secondFragment"
-        android:name="com.example.ghtk_ex1.SecondFragment"
-        android:label="fragment_second_label"
-        tools:layout="@layout/fragment_second">
-        <action
-            android:id="@+id/action_secondFragment_to_firstFragment"
-            app:destination="@id/firstFragment" />
+        android:id="@+id/navigation_b2"
+        android:name="com.example.ghtk_ex1.b2.B2Fragment"
+        android:label="@string/check_triangle"
+        tools:layout="@layout/fragment_b2">
+
     </fragment>
 
 </navigation>

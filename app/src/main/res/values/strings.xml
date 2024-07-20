@@ -21,4 +21,9 @@
     <string name="y2">Nhập Y2</string>
     <string name="x3">Nhập X3</string>
     <string name="y3">Nhập Y3</string>
+    <string name="colon">:</string>
+    <string name="count_character">Count character</string>
+    <string name="check_triangle">Check triangle</string>
+    <string name="error_field_required">Chưa nhập\n</string>
+    <string name="coordinate_third_point">Tọa độ điểm thứ ba\n</string>
 </resources>
